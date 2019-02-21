@@ -3,12 +3,25 @@ import L from "leaflet";
 
 const style = {
   width: "100%",
-  height: "600px"
+  height: "300px"
 };
 
 class Map extends React.Component {
   componentDidMount() {
-    // create map
+    if (!!navigator.geolocation) {
+      navigator.geolocation.watchPosition(
+        position => {
+          this.setState({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          });
+        },
+        err => console.log(err),
+        { enableHighAccuracy: true, timeout: 10000, maximumAge: 10000 }
+      );
+    } else {
+      alert("Eroor not supported");
+    }
     this.map = L.map("map", {
       center: [20.2961, 85.8245],
       zoom: 12,
@@ -22,7 +35,6 @@ class Map extends React.Component {
 
     // add marker
     this.marker = L.marker(this.props.markerPosition).addTo(this.map);
-    this.marker = L.marker({ lat: 20.2823, lng: 85.7702 }).addTo(this.map);
   }
   componentDidUpdate({ markerPosition }) {
     // check if position has changed
