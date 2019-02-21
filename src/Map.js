@@ -7,21 +7,16 @@ const style = {
 };
 
 class Map extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hospital:[],
+      rehospital:[]
+    };
+     this.setState({hospital:this.props.hospitals})
+  }
   componentDidMount() {
-    if (!!navigator.geolocation) {
-      navigator.geolocation.watchPosition(
-        position => {
-          this.setState({
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          });
-        },
-        err => console.log(err),
-        { enableHighAccuracy: true, timeout: 10000, maximumAge: 10000 }
-      );
-    } else {
-      alert("Eroor not supported");
-    }
+    this.setState({rehospital:this.state.hospital.map((hospita)=>hospita.Location_Coordinates)})
     this.map = L.map("map", {
       center: [20.2961, 85.8245],
       zoom: 12,
@@ -42,7 +37,9 @@ class Map extends React.Component {
       this.marker.setLatLng(this.props.markerPosition);
     }
   }
-  render() {
+  render()
+   {
+     console.log(this.state.rehospital)
     return <div id="map" style={style} />;
   }
 }

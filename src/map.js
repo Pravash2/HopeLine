@@ -10,23 +10,21 @@ export default class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get(`https://data.gov.in/node/356921/datastore/export/json`)
+      .get(`https://find-hospital.herokuapp.com/api/hospitals/cordinate`)
       .then(res => {
         this.setState({
-          hospital: res.data.data.filter(da => da[6] == "Odisha")
-        });
+          hospital:res.data
+        })
       });
   }
 
   render() {
     const { markerPosition } = this.state;
-    if (this.state.hospital) {
-      console.log(this.state.hospital);
-    }
+    if(this.state.hospital){
     return (
       <div>
-        <Map markerPosition={{ lat: 49.8419, lng: 24.0315 }} />
+        <Map markerPosition={{ lat: 49.8419, lng: 24.0315 }} hospitals={this.state.hospital} />
       </div>
-    );
+    )}
   }
 }
