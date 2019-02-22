@@ -5,6 +5,7 @@ import Map2 from './map'
 import SearchBar from "./searchBar";
 
 import "./styles.css";
+import './leaflet.css'
 
 
 function App() {

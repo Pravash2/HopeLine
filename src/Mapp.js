@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 import { render } from 'react-dom';
 import Control from 'react-leaflet-control';
 import { Map, Marker, Popup, TileLayer, ZoomControl, ScaleControl } from 'react-leaflet';
-
+import L from 'leaflet'
 
 
 import Dialog from './Dialog.js'
+
+
 
 export default class SimpleExample extends React.Component {
   constructor() {
@@ -43,7 +45,7 @@ export default class SimpleExample extends React.Component {
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
         />
         {this.state.markers.map((position, idx) => 
-          <Marker key={`marker-${idx}`} position={position}>
+          <Marker  key={`marker-${idx}`} position={position}>
           <Popup>
             <Dialog positions={position} hospitals={this.props.hospitals.filter(hospital=>hospital.Location_Coordinates==position)} />
           
