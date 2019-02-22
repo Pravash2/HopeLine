@@ -6,6 +6,7 @@ import SearchBar from "./searchBar";
 
 import "./styles.css";
 
+
 function App() {
   
   return (
