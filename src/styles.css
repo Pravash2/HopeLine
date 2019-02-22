@@ -1,9 +1,4 @@
-body {
-  margin: 0;
-}
-.map {
-  position: "relative";
-}
-.searchBar {
-  position: "absolute";
+.leaflet-container {
+    height: 400px;
+    width: 100%;
 }
