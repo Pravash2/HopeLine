@@ -14,6 +14,37 @@ import L from "leaflet";
 
 import Dialog from "./Dialog.js";
 
+const IconUrl=[L.icon({
+              iconUrl:
+                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/5e6p-045-hospital.png"
+            }),L.icon({
+              iconUrl:
+                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/z1eH-009-mortar-1.png"
+            }),L.icon({
+              iconUrl:
+                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/VdN1-001-ambulance.png"
+            }),L.icon({
+              iconUrl:
+                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/PBYV-034-eye-2.png"
+            }),L.icon({
+              iconUrl:
+                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/fB5_-095-tooth-1.png"
+            }),L.icon({
+              iconUrl:
+                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/yrU2-051-flask.png"
+            }),
+            ,L.icon({
+              iconUrl:
+                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/z1eH-009-mortar-1.png"
+            })
+            ,L.icon({
+              iconUrl:
+                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/KJLJ-045-hospital.png"
+            }),L.icon({
+              iconUrl:
+                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/AZgl-084-stretcher.png"
+            })]
+
 export default class SimpleExample extends React.Component {
   constructor() {
     super();
@@ -44,10 +75,7 @@ export default class SimpleExample extends React.Component {
           <Marker
             key={`marker-${idx}`}
             position={position}
-            icon={L.icon({
-              iconUrl:
-                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/5e6p-045-hospital.png"
-            })}
+            icon={IconUrl[9]}
             opacity={1}>
             <Popup>
               <Dialog
