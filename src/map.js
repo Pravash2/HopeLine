@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import Map from "./Mapp";
 import axios from "axios";
 
-import Loader from './Spinner'
+import Loader from "./Spinner";
 
 export default class App extends React.Component {
   state = {
