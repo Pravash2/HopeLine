@@ -11,6 +11,9 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import Avatar from "@material-ui/core/Avatar";
+
 const styles = {
   list: {
     width: 250
@@ -36,84 +39,123 @@ class TemporaryDrawer extends React.Component {
 
   render() {
     const { classes } = this.props;
-    console.log(this.props.open);
-    const sideList = (
-      <div className={classes.list}>
-        <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-      </div>
-    );
-
     const fullList = (
-      <div className={classes.fullList}>
+      <div style={{ height: `500px` }} className={classes.fullList}>
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/6Ggz-045-hospital.png"
+              />
+            </ListItemAvatar>
+            <ListItemText primary="Hospital" />
+          </ListItem>
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/t8kE-005-blood-1.png"
+              />
+            </ListItemAvatar>
+            <ListItemText primary="Clinic" />
+          </ListItem>
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/HrLr-027-drips.png"
+              />
+            </ListItemAvatar>
+            <ListItemText primary="Nurshing Home" />
+          </ListItem>
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/QqwA-049-pharmacy-2.png"
+              />
+            </ListItemAvatar>
+            <ListItemText primary="Community Health Centre" />
+          </ListItem>
         </List>
         <Divider />
         <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/Srrj-012-pills-1.png"
+              />
+            </ListItemAvatar>
+            <ListItemText primary="Child Care" />
+          </ListItem>
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/jwVg-034-eye-2.png"
+              />
+            </ListItemAvatar>
+            <ListItemText primary="Eye Care" />
+          </ListItem>
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/cyKR-094-tooth.png"
+              />
+            </ListItemAvatar>
+            <ListItemText primary="Dental Care" />
+          </ListItem>
+        </List>
+        <Divider />
+        <List>
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/UH0B-006-mortar.png"
+              />
+            </ListItemAvatar>
+            <ListItemText primary="Ayurvedic" />
+          </ListItem>
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/zMaC-009-mortar-1.png"
+              />
+            </ListItemAvatar>
+            <ListItemText primary="Homopatic" />
+          </ListItem>
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/IBam-001-pharmacy.png"
+              />
+            </ListItemAvatar>
+            <ListItemText primary="Veterinary" />
+          </ListItem>
+        </List>
+        <Divider />
+        <List>
+          <ListItem button>
+            <ListItemAvatar>
+              <Avatar
+                alt="Remy Sharp"
+                src="https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/ypF--050-test-tube-1.png"
+              />
+            </ListItemAvatar>
+            <ListItemText primary="Pathology Lab" />
+          </ListItem>
         </List>
       </div>
     );
 
     return (
       <div>
-        <Drawer
-          open={this.state.left}
-          onClose={this.toggleDrawer("left", false)}>
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer("left", false)}
-            onKeyDown={this.toggleDrawer("left", false)}>
-            {sideList}
-          </div>
-        </Drawer>
-        <Drawer
-          anchor="top"
-          open={this.state.top}
-          onClose={this.toggleDrawer("top", false)}>
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer("top", false)}
-            onKeyDown={this.toggleDrawer("top", false)}>
-            {fullList}
-          </div>
-        </Drawer>
         <Drawer
           anchor="bottom"
           open={this.props.open}
@@ -124,18 +166,6 @@ class TemporaryDrawer extends React.Component {
             onClick={this.toggleDrawer("bottom", false)}
             onKeyDown={this.toggleDrawer("bottom", false)}>
             {fullList}
-          </div>
-        </Drawer>
-        <Drawer
-          anchor="right"
-          open={this.state.right}
-          onClose={this.toggleDrawer("right", false)}>
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer("right", false)}
-            onKeyDown={this.toggleDrawer("right", false)}>
-            {sideList}
           </div>
         </Drawer>
       </div>

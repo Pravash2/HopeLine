@@ -66,6 +66,7 @@ class CustomizedInputBase extends React.Component {
           className={classes.iconButton}
           aria-label="Directions">
           <DirectionsIcon />
+          <p style={{fontSize:'8px'}}>Emergency</p>
         </IconButton>
       </Paper>
     );
