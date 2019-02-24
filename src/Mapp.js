@@ -23,21 +23,12 @@ export default class SimpleExample extends React.Component {
     })
   }
   
-  addMarker = (e) => {
-    const {markers} = this.state
-    markers.push(e.latlng)
-    this.setState({markers})
-  }
-
- 
-
   render() {
     
     return (
       <Map 
       style={{height:`${window.innerHeight}px`,flex:1}}
         center={[20.2961, 85.8245]} 
-        onClick={this.addMarker}
         zoom={12} 
         >
         <TileLayer
