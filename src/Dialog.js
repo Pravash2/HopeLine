@@ -17,6 +17,7 @@ import SendIcon from "@material-ui/icons/Send";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 
 import axios from "axios";
+import Loader from "./SpinnerHori";
 
 const styles = {
   appBar: {
@@ -75,10 +76,9 @@ class FullScreenDialog extends React.Component {
           <Button
             fullWidth
             color="secondary"
-             size="small"
+            size="small"
             onClick={this.handleClickOpen}>
             {hospital.Hospital_Name}
-           
           </Button>
           <Dialog
             fullScreen
@@ -163,7 +163,7 @@ class FullScreenDialog extends React.Component {
         </div>
       );
     }
-    return <div>Loading</div>;
+    return <Loader />;
   }
 }
 
