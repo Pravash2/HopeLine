@@ -73,10 +73,12 @@ class FullScreenDialog extends React.Component {
       return (
         <div>
           <Button
-            variant="outlined"
-            color="primary"
+            fullWidth
+            color="secondary"
+             size="small"
             onClick={this.handleClickOpen}>
             {hospital.Hospital_Name}
+           
           </Button>
           <Dialog
             fullScreen
