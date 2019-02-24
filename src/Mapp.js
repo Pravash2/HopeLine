@@ -46,7 +46,7 @@ export default class SimpleExample extends React.Component {
             position={position}
             icon={L.icon({
               iconUrl:
-                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/Wz1r-005-blood-1.png"
+                "https://uploads.codesandbox.io/uploads/user/6f8b104e-6915-422e-95e8-f395886bcc19/5e6p-045-hospital.png"
             })}
             opacity={1}>
             <Popup>
