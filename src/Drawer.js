@@ -157,14 +157,14 @@ class TemporaryDrawer extends React.Component {
     return (
       <div>
         <Drawer
-          anchor="bottom"
+          anchor="left"
           open={this.props.open}
           onClose={this.props.close}>
           <div
             tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer("bottom", false)}
-            onKeyDown={this.toggleDrawer("bottom", false)}>
+            role="left"
+            onClick={this.toggleDrawer("left", false)}
+            onKeyDown={this.toggleDrawer("left", false)}>
             {fullList}
           </div>
         </Drawer>
